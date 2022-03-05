@@ -118,7 +118,7 @@ namespace CopyPractice
                 //元のファイルのfullPath
                 string fullPath = selectDir + @"\" + fileName + extension;
                 //ファイル名を新規作成日に置換
-                DateTime fileCreate = File.GetCreationTime(fullPath);
+                DateTime fileCreate = File.GetLastWriteTime(fullPath);
                 string afterSelectedItem = selectedItem.Replace(fileName, fileCreate.ToString($"yyyyMMdd_{i + 1}"));
                 //変更後のfullPath
                 string afterFullPath = selectDir + @"\" + afterSelectedItem;
